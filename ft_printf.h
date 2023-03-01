@@ -25,8 +25,5 @@ int				ft_putnbr(int nb);
 int				ft_putunsigned(unsigned int nb, int save);
 int				ft_printptr(unsigned long a);
 int				ft_printhex(unsigned long a, char format);
-//for testing
-int	print_hex(unsigned long long n, char i);
-int    ft_print_hexu(unsigned long long int n, char format);
 
 #endif
