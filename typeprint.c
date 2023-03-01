@@ -87,9 +87,9 @@ int	ft_putunsigned(unsigned int nb, int save)
 int	ft_printhex(unsigned long a, char format)
 {
 	int		save;
-	char	*b;
+	char		*b;
 	int		i;
-	char	f[16];
+	char		f[16];
 
 	b = "0123456789abcdef";
 	i = 0;
