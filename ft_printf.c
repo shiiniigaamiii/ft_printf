@@ -22,11 +22,6 @@ int	ft_checktype(va_list temp, char type)
 		count += ft_printchar(va_arg(temp, int));
 	else if (type == 's')
 		count += ft_putstr(va_arg(temp, char *));
-/*	else if (type == 'p')
-	{
-		write (1, "0x", 2);
-		count += ft_printhex(va_arg(temp, unsigned long), 'x') + 2;
-	}*/
 	else if (type == 'd' || type == 'i')
 		count += ft_putnbr(va_arg(temp, int));
 	else if (type == 'u')
@@ -34,11 +29,11 @@ int	ft_checktype(va_list temp, char type)
 	else if (type == 'x' || type == 'X' || type == 'p')
 	{
 		if(type == 'x' || type == 'X')
-			count += ft_printhex(va_arg(temp, unsigned long long), type);
+			count += ft_printhex(va_arg(temp, unsigned int), type);
 		else
 		{
 			write (1, "0x", 2);
-			count += (ft_printhex(va_arg(temp, unsigned long long), 'x') + 2);
+			count += (ft_printhex(va_arg(temp, unsigned long), 'x') + 2);
 		}
 	}
 	else if (type == '%')
